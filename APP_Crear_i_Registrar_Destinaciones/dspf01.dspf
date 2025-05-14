@@ -1,0 +1,153 @@
+     A*%%TS  SD  20250512  233919  LUCASAM     REL-V7R5M0  5770-WDS
+     A*%%EC
+     A                                      DSPSIZ(24 80 *DS3)
+     A                                      INDARA
+     A                                      CF03(03 'Sortir')
+     A          R PM
+     A*%%TS  SD  20250511  220922  LUCASAM     REL-V7R5M0  5770-WDS
+     A                                  5  7'--------- MENÚ SISTEMA DE RESERVES-
+     A                                        --------- '
+     A                                  6  7'1 Afegir destinació               -
+     A                                                  '
+     A                                  7  7'2 Registrar reserves              -
+     A                                                  '
+     A                                  8  7'3 Cancel·lar reserves             -
+     A                                                  '
+     A                                  9  7'4 Modificar destinació            -
+     A                                                  '
+     A                                 10  7'5 Generar informe                 -
+     A                                                  '
+     A                                 11  7'6 Sortir                          -
+     A                                                  '
+     A                                 12  7'-----------------------------------
+     A                                      ----------  '
+     A                                 14  7'Introdueix una opció:'
+     A                                  2  1TIME
+     A                                  3  1DATE
+     A                                      EDTCDE(Y)
+     A                                  2 67USER
+     A                                 18 49'F3 Sortir'
+     A                                      DSPATR(RI)
+     A            PMOPC          1S 0B 14 29DSPATR(UL)
+     A            PMERR         40A  B 18  7DSPATR(UL)
+     A                                      COLOR(WHT)
+     A                                      DSPATR(PR)
+     A          R P1
+     A*%%TS  SD  20250507  002058  LUCASAM     REL-V7R5M0  5770-WDS
+     A                                  1  2TIME
+     A                                  2  2DATE
+     A                                      EDTCDE(Y)
+     A                                  1 65USER
+     A                                  6 30'Afegir una Destinació'
+     A                                  8 21'Codi Destinació :'
+     A                                 10 21'Nom Destinació  :'
+     A                                 12 21'Preu destinació :'
+     A                                 14 21'Places Totals   :'
+     A                                 18 49'F3=Tornar Enrere'
+     A                                      DSPATR(RI)
+     A            P1COD          4S 0B  8 40DSPATR(UL)
+     A            P1NOM         30A  B 10 40DSPATR(UL)
+     A            P1PRE          7Y 2B 12 40EDTWRD('     .  ')
+     A                                      DSPATR(UL)
+     A            P1PLAT         3S 0B 14 40DSPATR(UL)
+     A            P1ERR         40A  B 18  2DSPATR(UL)
+     A                                      DSPATR(PR)
+     A                                      COLOR(WHT)
+     A          R P2
+     A*%%TS  SD  20250507  000635  LUCASAM     REL-V7R5M0  5770-WDS
+     A                                  1  2TIME
+     A                                  2  2DATE
+     A                                      EDTCDE(Y)
+     A                                  1 65USER
+     A                                  6 30'Registrar una Reserva'
+     A                                  8 21'Codi Destinació :'
+     A                                 18 49'F3=Tornar Enrere'
+     A                                      DSPATR(RI)
+     A            P2COD          4S 0B  8 39DSPATR(UL)
+     A            P2ERR         40A  B 18  2DSPATR(UL)
+     A                                      DSPATR(PR)
+     A                                      COLOR(WHT)
+     A          R P3
+     A*%%TS  SD  20250507  002348  LUCASAM     REL-V7R5M0  5770-WDS
+     A                                  1  2TIME
+     A                                  2  2DATE
+     A                                      EDTCDE(Y)
+     A                                  1 65USER
+     A                                  6 30'Cancel·lar una Reserva'
+     A                                  8 21'Codi Destinació :'
+     A                                 18 49'F3=Tornar Enrere'
+     A                                      DSPATR(RI)
+     A            P3COD          4S 0B  8 40DSPATR(UL)
+     A            P3ERR         40A  B 18  2DSPATR(UL)
+     A                                      DSPATR(PR)
+     A                                      COLOR(WHT)
+     A          R P4
+     A*%%TS  SD  20250507  152518  LUCASAM     REL-V7R5M0  5770-WDS
+     A                                      CF07(07 'Cancelar Modificació')
+     A                                  1  2TIME
+     A                                  2  2DATE
+     A                                      EDTCDE(Y)
+     A                                  2  1USER
+     A                                  6 29'Modificar una Destinació'
+     A                                  8 21'Codi Destinació :'
+     A  27                                  COLOR(BLU)
+     A                                 10 21'Nom Destinació  :'
+     A  26                                  DSPATR(ND)
+     A                                 12 21'Preu destinació :'
+     A  26                                  DSPATR(ND)
+     A                                 14 21'Places Totals   :'
+     A  26                                  DSPATR(ND)
+     A                                 16 21'Places Restants:'
+     A                                      COLOR(BLU)
+     A  26                                  DSPATR(ND)
+     A                                 18 49'F3=Tornar Enrere'
+     A                                      DSPATR(RI)
+     A            P4COD          4S 0B  8 40DSPATR(UL)
+     A  27                                  DSPATR(PR)
+     A  27                                  COLOR(BLU)
+     A            P4NOM         30A  B 10 40DSPATR(UL)
+     A  26                                  DSPATR(ND)
+     A  26                                  DSPATR(PR)
+     A            P4PRE          7Y 2B 12 40EDTWRD('     .  ')
+     A                                      DSPATR(UL)
+     A  26                                  DSPATR(ND)
+     A  26                                  DSPATR(PR)
+     A            P4PLAT         3S 0B 14 40DSPATR(UL)
+     A  26                                  DSPATR(ND)
+     A  26                                  DSPATR(PR)
+     A            P4PLAD         3S 0B 16 40COLOR(BLU)
+     A                                      DSPATR(UL)
+     A  26                                  DSPATR(PR)
+     A  26                                  DSPATR(ND)
+     A            P4ERR         40A  B 18  2DSPATR(UL)
+     A                                      DSPATR(PR)
+     A                                      COLOR(WHT)
+     A                                 19 49'F7=Cancel·lar Modificació'
+     A                                      DSPATR(RI)
+     A  26                                  DSPATR(ND)
+     A          R P5
+     A*%%TS  SD  20250507  152518  LUCASAM     REL-V7R5M0  5770-WDS
+     A                                  1  2TIME
+     A                                  2  2DATE
+     A                                      EDTCDE(Y)
+     A                                  1 65USER
+     A                                  6 30'Informe de un registro'
+     A                                  8 21'Codi Destinació :'
+     A                                 10 21'Nom Destinació  :'
+     A                                 12 21'Preu destinació :'
+     A                                 14 21'Places Totals   :'
+     A                                 16 21'Places Restants :'
+     A                                 18 49'F3=Tornar Enrere'
+     A                                      DSPATR(RI)
+     A            P5COD          4S 0B  8 40DSPATR(UL)
+     A            P5NOM         30A  B 10 40DSPATR(UL)
+     A                                      DSPATR(PR)
+     A            P5PRE          7Y 2B 12 40EDTWRD('     .  ')
+     A                                      DSPATR(UL)
+     A                                      DSPATR(PR)
+     A            P5PLAT         3S 0B 14 40DSPATR(UL)
+     A                                      DSPATR(PR)
+     A            P5PLAD         3S 0B 16 40
+     A            P5ERR         40A  B 18  2DSPATR(UL)
+     A                                      DSPATR(PR)
+     A                                      COLOR(WHT)

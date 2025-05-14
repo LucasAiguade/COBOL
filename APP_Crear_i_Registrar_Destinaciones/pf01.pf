@@ -1,0 +1,11 @@
+     A* ============================================================ *
+     A*         ARXIU FÍSIC PER FER REGISTRES DE DESTINACIONS        *
+     A* ============================================================ *
+     A                                      UNIQUE
+     A          R PF01
+     A            PF1COD         4S 0       TEXT('CODI DESTINACIÓ')
+     A            PF1NOM        30A         TEXT('NOM')
+     A            PF1PRE         5S 2       TEXT('PREU')
+     A            PF1PLAT        3S 0       TEXT('PLACES TOTALS')
+     A            PF1PLAD        3S 0       TEXT('PLACES DISPONIBLES')
+     A          K PF1COD
